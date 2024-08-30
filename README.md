@@ -1,6 +1,7 @@
 # AIFFEL Campus Online Quest
 
 - 아이펠 온라인 리서치 과정 quest
+- 교육과정 24.08. ~ 25.02.
 
 
 ## 소개
