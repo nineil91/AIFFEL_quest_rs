@@ -1,0 +1,19 @@
+- 사진에서 문제점 찾기
+        1. label에 없는 값은 구분을 잘 못함 / 다른 객체라고 인식
+            e.g. 개구르리를 새라고 함
+
+- Semantic Segmentation mask의 error를 보완할 수 있는 좋은 solution + 근거
+        - segmentation에 포함된 라벨로 시도를 한다.
+            - 원하는 lable을 모델에 학습시키고, 이용해야 한다.
+        - Segmentation이 부정확한 에러가 종종 발생한다. (위 민준님께서 작성한 관중 포함 문제 등)
+            - 아웃포커스 효과를 사용한다. (???
+            - 이를 보안한 RCNN https://github.com/matterport/Mask_RCNN
+
+- 회고
+    - 라벨 내에 있는 object들을 한정하여 사진을 선정했어야 했는데 잘 못한 것 같음..
+        - 이 덕분에 추가 실험도 진행했음!
+        - semantic segmentation mask를 학습된 모델로만 사용하고 실제 학습을 진행해 보지 못해 LMS에서 제시한 U-Net과 같은 모델로 원하는 라벨을 학습해보고 싶음
+    - 루브릭 질문을 통해 알게 된 Mask_RCNN의 동작도 좀 더 알아보고 싶음
+
+- 노드의 내용이나 루브릭을 확장하여 진행했던 실험이 있다면 공유해봅시다 !
+    - lable에 없는 사진 테스트 해보기 : 개구리 사진
